@@ -1,0 +1,36 @@
+
+    <div class="container-fluid">
+
+      <form ngForm #register="ngForm" (ngSubmit)="onSubmit()" >
+           <h2>Edit Contect</h2>
+           <div class="form-group">
+             <label for="name">Name</label>
+             <div>
+               <input type="text"  [(ngModel)]="contects.name" name="name" id="name" class="form-control" required>
+             </div>
+           </div>
+
+           <div class="form-group">
+            <label for="Mobile">Mobile Number</label>
+            <div>
+              <input type="text" [(ngModel)]="contects.phonenumber" name="phonenumber" id="Mobile"  class="form-control" pattern="\+91[0-9]{10}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div>
+              <input type="email" [(ngModel)]="contects.email" name="email" id="email"  class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">address</label>
+            <div>
+              <input type="text" [(ngModel)]="contects.email" name="email" id="Address"  class="form-control" required>
+            </div>
+          </div>
+          <input type="submit" value="Register" >
+      </form>
+    </div>
+   <h2 class="btn-success">{{msg}}</h2>

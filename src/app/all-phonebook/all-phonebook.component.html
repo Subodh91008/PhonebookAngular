@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">phonenumber</th>
+      <th scope="col">email</th>
+      <th scope="col">Operarion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of contects">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.phonenumber}}</td>
+      <td>{{p.email}}</td>
+      <td><button class="btn btn-primary" (click)="editphone(p.id)">Edit</button></td>
+      <td>  <button class="btn btn-danger" (click)="deletcontect(p.id)" >Delete</button></td>
+
+    </tr>
+  </tbody>
+</table>
+{{ms}}
+{{msg}}
+
+
+
